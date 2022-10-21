@@ -1,0 +1,19 @@
+{
+  "name": "Con-Man",
+  "version": "3.0.0",
+  "description": "What am I about?",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "aoi.js": "^5.5.5"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "devDependencies": {
+    "node": "^16.18.0",
+    "aoi.db": "^1.0.0"
+  }
+}
