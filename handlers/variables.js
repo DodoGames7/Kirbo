@@ -1,4 +1,7 @@
 module.exports = {
-chatbot: "none",
-isset: ""
-}
+    chatbot: "none",
+    isset: "",
+    embed: "false",
+    replyping: "no"
+    }
+    
