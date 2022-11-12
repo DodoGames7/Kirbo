@@ -1,26 +1,20 @@
 module.exports = {
     name: "$alwaysExecute",
     $if: "v4",
-    code: `$if[$getServerVar[embed]==false]
-$cooldown[2s;Woah!, slow down!, don't spam too fast you can break me by doing that!]
-    $reply[$messageID;$getServerVar[replyping]]
-$jsonRequest[https://api.popcat.xyz/chatbot?msg=$uri[$message;encode]&owner=$uri[$username[$botOwnerid];encode]&botname=$uri[$username[$clientID];encode];response]
-    
-    
-    $onlyForChannels[$getServerVar[chatbot];]
-    $suppressErrors[hi there! something went wrong when reading your message please try again.]
-$else
-$if[$getServerVar[embed]==true]
-$reply[$messageID;$getServerVar[replyping]]
-$cooldown[2s;Woah!, slow down!, don't spam too fast you can break me by doing that!]
+    code: `
+$cooldown[2s;]
+$suppressErrors[hi there! something went wrong when reading your message, please try again later.]
+$if[$getServerVar[embed]==false]
+$get[response]
+$elseif[$getServerVar[embed]==true]
 $title[$username[$clientID]]
-$description[$jsonRequest[https://api.popcat.xyz/chatbot?msg=$uri[$message;encode]&owner=$uri[$username[$botOwnerid];encode]&botname=$uri[$username[$clientID];encode];response]]
+$description[$get[response]]
 $color[d74894]
+$endelseif
+$endif
+$let[response;$jsonRequest[https://api.popcat.xyz/chatbot?msg=$uri[$message;encode]&owner=$uri[$username[$botOwnerid];encode]&botname=$uri[$username[$clientID];encode];response]]
+$reply[$messageID;$getServerVar[replyping]]
 $onlyForChannels[$getServerVar[chatbot];]
-$suppressErrors[hi there! something went wrong when reading your message please try again.]
-$endif
-$endif
-
     `
     }
 
