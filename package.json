@@ -7,13 +7,12 @@
     "start": "node ."
   },
   "dependencies": {
-    "aoi.js": "^5.5.5"
+    "aoi.js": "github:AkaruiDevelopment/aoi.js"
   },
   "engines": {
     "node": "16.x"
   },
   "devDependencies": {
-    "node": "^18.12.0",
-    "aoi.db": "^1.0.0"
+    "node": "^18.12.1"
   }
 }
