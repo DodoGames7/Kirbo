@@ -6,16 +6,7 @@ const bot = new aoijs.AoiClient({
    token: process.env.TOKEN,
  //Discord Bot Token, (ofc it's hidden what did you expect)
    prefix: ["c!", "<@$clientID>"],  //Discord Bot Prefix
-   intents: ["GUILDS", "GUILD_MESSAGES"], // the discord.js intents
-   database: {
-    db: require("aoi.db"),
-    type: "aoi.db",
-    path: "./database/",
-    tables: ["main"],
-    extraOptions: {
-      dbType: "KeyValue",
-    },
-  }
+   intents: ["Guilds", "MessageContent", "GuildMessages"], // the discord.js v14 intents
  })
 
 
