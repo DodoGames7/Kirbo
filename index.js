@@ -7,6 +7,7 @@ const bot = new aoijs.AoiClient({
  //Discord Bot Token, (ofc it's hidden what did you expect)
    prefix: ["c!", "<@$clientID>"],  //Discord Bot Prefix
    intents: ["Guilds", "MessageContent", "GuildMessages"], // the discord.js v14 intents
+   disableLogs: true
  })
 
 
