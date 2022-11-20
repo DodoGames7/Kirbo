@@ -18,10 +18,10 @@ yeah there is, you can join with This [Link](https://discord.gg/pFwKjAaZvj)
 # bot-features FAQ
 
 # how do i make the bot use embed mode
-run \`c!settings\` command and then click on "Embed" button to make the bot use embeds
+run `c!settings` command and then click on "Embed" button to make the bot use embeds
 
 # i want Kirbo to mention me at every single reply, how do i do that
-run \`c!settings\` command and then click on "Reply Mention" button to toggle this feature
+run `c!settings` command and then click on "Reply Mention" button to toggle this feature
 
 # can i disable existing settings if i have enabled them?
 just re-click on them to disable them (it's a toggle buttons so no need for both disable and re-enable button)
