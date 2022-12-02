@@ -14,6 +14,7 @@ you need message content enabled so the bot can then talk without issue
 * set and or remove current chatbot channel anytime depending on your decision
 * tries to be lightweight by not using all stuff that increases resources
 * uses pop cat api by default so no random downtimes (unless if the api itself went down)
+* customize on how you want Kirbo to behave using settings command!
 
 # what if i don't want to host the bot?
 Kirbo is public on discord as well this means that the source code isn't just public but including the bot too!, you can invite it [here (it does not require admin perm for safety reasons)](https://discord.com/api/oauth2/authorize?client_id=775005602727591956&permissions=84992&scope=bot)
