@@ -21,11 +21,10 @@ module.exports = [{
     $if[$getServerVar[embed]==false]
     $interactionReply[From Now On!, i will use embeds as you toggled the option;;;;everyone;yes]
     $setServerVar[embed;true;$guildID]
-    $else
-    $if[$getServerVar[embed]==true]
+    $elseif[$getServerVar[embed]==true]
     $interactionReply[From Now On!, i will no longer use embeds as you toggled the option;;;;everyone;yes]
     $setServerVar[embed;false;$guildID]
-    $endif
+    $endelseif
     $endif
     $onlyif[$get[authorID]==$interactionData[author.id];{
     "content" : "You aren't the author of this interaction.",
@@ -46,11 +45,10 @@ module.exports = [{
         code: `$if[$getServerVar[replyping]==yes]
     $interactionReply[From Now On!, i will no longer mention you as you toggled the option;;;;everyone;yes]
     $setServerVar[replyping;no;$guildID]
-    $else
-    $if[$getServerVar[replyping]==no]
+    $elseif[$getServerVar[replyping]==no]
     $interactionReply[From Now On!, i will mention you as you toggled the option;;;;everyone;yes]
     $setServerVar[replyping;yes;$guildID]
-    $endif
+    $endelseif
     $endif
     $onlyif[$get[authorID]==$interactionData[author.id];{
     "content" : "You aren't the author of this interaction.",
