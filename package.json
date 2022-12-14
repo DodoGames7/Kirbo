@@ -1,6 +1,6 @@
 {
   "name": "Kirbo",
-  "version": "3.0.2-preview",
+  "version": "3.0.2-stable",
   "description": "What am I about?",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "node": "16.x"
   },
   "devDependencies": {
-    "node": "^18.12.0",
+    "node": "^18.12.1",
     "aoi.db": "^1.0.0"
   }
 }
