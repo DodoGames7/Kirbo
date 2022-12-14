@@ -1,6 +1,6 @@
 module.exports = {
     name: "version",
-    aliases "ver",
+    aliases: "ver",
     code: `$title[Version: 3.0.2 (Stable Release)]
     $description[Hi!, Welcome! in this version there are more features added!
     
