@@ -16,5 +16,8 @@ you need message content enabled so the bot can then talk without issue
 * uses pop cat api by default so no random downtimes (unless if the api itself went down)
 * customize on how you want Kirbo to behave using settings command!
 
+# have General Questions?
+we have our own [FAQ](https://github.com/DodoGames7/Kirbo/blob/dev/FAQ.md) so you can find a answer of one of your questions if not then feel free to ask via [Discussions Tab](https://github.com/DodoGames7/Kirbo/discussions) we welcome any type of questions no matter what it would be for either Kirbo or smth
+
 # what if i don't want to host the bot?
 Kirbo is public on discord as well this means that the source code isn't just public but including the bot too!, you can invite it [here (it does not require admin perm for safety reasons)](https://discord.com/api/oauth2/authorize?client_id=775005602727591956&permissions=84992&scope=bot)
