@@ -5,7 +5,7 @@ module.exports = {
     $addField[Server Count;$serverCount;yes]
     $addField[Node.js;$nodeVersion;yes]
     $addField[Cpu;$cpu;yes]
-    $addField[Ram;$ram;yes]
+    $addField[Ram;$round[$ram];yes]
     $addField[Ping;$pingms;yes]
     $addField[Version;v3.0.2-preview;yes]
     $addField[Uptime;$uptime[humanize];yes]
