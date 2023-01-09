@@ -10,7 +10,7 @@ module.exports = [{
     $color[d74894]
     $addButton[1;Reply Mention;1;replytoggle_$authorID;no]
     $addButton[1;Embed;1;setting_$authorID;no]
-    $onlyPerms[manageserver;you need \`MANAGE_SERVER\` Perm in order to manage me on how i should talk]
+    $onlyPerms[manageserver;you need \`ManageServer\` Perm in order to manage me on how i should talk]
     `
     },
     {
