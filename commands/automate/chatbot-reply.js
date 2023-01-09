@@ -1,6 +1,6 @@
 module.exports = {
     name: "$alwaysExecute",
-    $if: "v4",
+    $if: "old",
     code: `
 $cooldown[2s;]
 $suppressErrors[hi there! something went wrong when reading your message, please try again later.]

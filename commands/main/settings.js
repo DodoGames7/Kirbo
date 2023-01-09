@@ -15,7 +15,7 @@ module.exports = [{
     },
     {
         type: "interaction",
-        $if: "v4",
+        $if: "old",
         prototype: "button",
         code: `
     $if[$getServerVar[embed]==false]
@@ -42,7 +42,7 @@ module.exports = [{
     },{
         type: "interaction",
         prototype: "button",
-        $if: "v4",
+        $if: "old",
         code: `$if[$getServerVar[replyping]==yes]
     $interactionReply[From Now On!, i will no longer mention you as you toggled the option;;;;everyone;yes]
     $setServerVar[replyping;no;$guildID]

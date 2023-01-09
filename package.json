@@ -1,13 +1,14 @@
 {
   "name": "Kirbo",
-  "version": "3.0.3-alpha",
+  "version": "3.0.4-alpha",
   "description": "What am I about?",
   "main": "index.js",
   "scripts": {
     "start": "node ."
   },
   "dependencies": {
-    "aoi.js": "github:AkaruiDevelopment/aoi.js"
+    "aoi.js": "github:AkaruiDevelopment/aoi.js",
+    "aoi.parser": "^1.1.1"
   },
   "engines": {
     "node": "16.x"
