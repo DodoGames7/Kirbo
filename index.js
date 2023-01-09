@@ -31,3 +31,7 @@ bot.status({
   time: 12
 })
 
+// parser support
+const {  Util } = require("aoi.js");
+const { parse } = require(`aoi.parser`);
+Util.parsers.ErrorHandler = parse;
