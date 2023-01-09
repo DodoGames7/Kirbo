@@ -8,8 +8,8 @@ module.exports = [{
     
     Note: click on buttons to toggle options to re-enable or re-disable them]
     $color[d74894]
-    $addButton[1;Reply Mention;primary;replytoggle_$authorID;no]
-    $addButton[1;Embed;primary;setting_$authorID;no]
+    $addButton[1;Reply Mention;1;replytoggle_$authorID;no]
+    $addButton[1;Embed;1;setting_$authorID;no]
     $onlyPerms[manageserver;you need \`MANAGE_SERVER\` Perm in order to manage me on how i should talk]
     `
     },
@@ -27,11 +27,10 @@ module.exports = [{
     $setServerVar[embed;false;$guildID]
     $endif
     $endif
-    $onlyif[$get[authorID]==$interactionData[author.id];{
-    "content" : "You aren't the author of this interaction.",
-    "ephemeral" : true,
-    "options" : { "interaction" : true }
-    }]
+    $onlyif[$get[authorID]==$interactionData[author.id];
+    {newEmbed:{title:Error!}{description:You aren't the author of this interaction.}}
+    {interaction}{ephemeral}
+    ]
     
     $onlyif[$get[customId]==setting;]
     
@@ -52,12 +51,11 @@ module.exports = [{
     $setServerVar[replyping;yes;$guildID]
     $endif
     $endif
-    $onlyif[$get[authorID]==$interactionData[author.id];{
-    "content" : "You aren't the author of this interaction.",
-    "ephemeral" : true,
-    "options" : { "interaction" : true }
-    }]
-    
+    $onlyif[$get[authorID]==$interactionData[author.id];
+    {newEmbed:{title:Error!}{description:You aren't the author of this interaction.}}
+    {interaction}{ephemeral}
+    ]
+
     $onlyif[$get[customId]==replytoggle;]
     
     $let[authorID;$splitText[2]]

@@ -1,6 +1,9 @@
 module.exports = {
     name: "execute",
-    code: `$exec[$message]
+    code: `
+    \`\`\`
+    $exec[$message]
+    \`\`\`
     $onlyForIDS[$botOwnerid;]
     `
     }
