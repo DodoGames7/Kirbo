@@ -19,11 +19,11 @@ module.exports = [{
         prototype: "button",
         code: `
     $if[$getServerVar[embed]==false]
-    $interactionReply[From Now On!, i will use embeds as you toggled the option;;;;everyone;yes]
+    $interactionReply[From Now On!, i will use embeds as you toggled the option;;;;all;yes]
     $setServerVar[embed;true;$guildID]
     $else
     $if[$getServerVar[embed]==true]
-    $interactionReply[From Now On!, i will no longer use embeds as you toggled the option;;;;everyone;yes]
+    $interactionReply[From Now On!, i will no longer use embeds as you toggled the option;;;;all;yes]
     $setServerVar[embed;false;$guildID]
     $endif
     $endif
@@ -44,11 +44,11 @@ module.exports = [{
         prototype: "button",
         $if: "old",
         code: `$if[$getServerVar[replyping]==yes]
-    $interactionReply[From Now On!, i will no longer mention you as you toggled the option;;;;everyone;yes]
+    $interactionReply[From Now On!, i will no longer mention you as you toggled the option;;;;all;yes]
     $setServerVar[replyping;no;$guildID]
     $else
     $if[$getServerVar[replyping]==no]
-    $interactionReply[From Now On!, i will mention you as you toggled the option;;;;everyone;yes]
+    $interactionReply[From Now On!, i will mention you as you toggled the option;;;;all;yes]
     $setServerVar[replyping;yes;$guildID]
     $endif
     $endif
