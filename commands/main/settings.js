@@ -29,7 +29,8 @@ module.exports = [{
     $endif
     $onlyif[$get[authorID]==$interactionData[author.id];
     {newEmbed:{title:Error!}{description:You aren't the author of this interaction.}}
-    {interaction}{ephemeral}
+    {options:{ephemeral: true}}
+{extraOptions:{interaction: true}}
     ]
     
     $onlyif[$get[customId]==setting;]
@@ -53,7 +54,8 @@ module.exports = [{
     $endif
     $onlyif[$get[authorID]==$interactionData[author.id];
     {newEmbed:{title:Error!}{description:You aren't the author of this interaction.}}
-    {interaction}{ephemeral}
+    {options:{ephemeral: true}}
+{extraOptions:{interaction: true}}
     ]
 
     $onlyif[$get[customId]==replytoggle;]
