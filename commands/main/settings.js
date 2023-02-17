@@ -8,8 +8,8 @@ module.exports = [{
     
     Note: click on buttons to toggle options to re-enable or re-disable them]
     $color[d74894]
-    $addButton[1;Reply Mention;1;replytoggle_$authorID;no]
-    $addButton[1;Embed;1;setting_$authorID;no]
+    $addButton[1;Reply Mention;1;replytoggle_$authorID;false]
+    $addButton[1;Embed;1;setting_$authorID;false]
     $onlyPerms[manageguild;you need \`ManageServer\` Perm in order to manage me on how i should talk]
     `
     },
@@ -18,13 +18,13 @@ module.exports = [{
         $if: "old",
         prototype: "button",
         code: `
-    $if[$getServerVar[embed]==false]
-    $interactionReply[From Now On!, i will use embeds as you toggled the option;;;;all;yes]
-    $setServerVar[embed;true;$guildID]
+    $if[$getGuildVar[embed]==false]
+    $interactionReply[From Now On!, i will use embeds as you toggled the option;;;;all;true]
+    $setGuildVar[embed;true;$guildID]
     $else
-    $if[$getServerVar[embed]==true]
-    $interactionReply[From Now On!, i will no longer use embeds as you toggled the option;;;;all;yes]
-    $setServerVar[embed;false;$guildID]
+    $if[$getGuildVar[embed]==true]
+    $interactionReply[From Now On!, i will no longer use embeds as you toggled the option;;;;all;true]
+    $setGuildVar[embed;false;$guildID]
     $endif
     $endif
     $onlyif[$get[authorID]==$interactionData[author.id];
@@ -43,13 +43,13 @@ module.exports = [{
         type: "interaction",
         prototype: "button",
         $if: "old",
-        code: `$if[$getServerVar[replyping]==yes]
-    $interactionReply[From Now On!, i will no longer mention you as you toggled the option;;;;all;yes]
-    $setServerVar[replyping;no;$guildID]
+        code: `$if[$getGuildVar[replyping]==true]
+    $interactionReply[From Now On!, i will no longer mention you as you toggled the option;;;;all;true]
+    $setGuildVar[replyping;false;$guildID]
     $else
-    $if[$getServerVar[replyping]==no]
-    $interactionReply[From Now On!, i will mention you as you toggled the option;;;;all;yes]
-    $setServerVar[replyping;yes;$guildID]
+    $if[$getGuildVar[replyping]==false]
+    $interactionReply[From Now On!, i will mention you as you toggled the option;;;;all;true]
+    $setGuildVar[replyping;true;$guildID]
     $endif
     $endif
     $onlyif[$get[authorID]==$interactionData[author.id];

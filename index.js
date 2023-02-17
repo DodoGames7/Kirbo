@@ -7,14 +7,15 @@ const bot = new aoijs.AoiClient({
  //Discord Bot Token, (ofc it's hidden what did you expect)
    prefix: ["c!", "<@$clientID>"],  //Discord Bot Prefix
    intents: ["Guilds", "MessageContent", "GuildMessages"], // the discord.js v14 intents
-   disableLogs: true
+   events: ["onMessage", "onInteractionCreate"],
+   aoiLogs: false,
+   aoiWarning: true
  })
 
 
 
 // handlers
 bot.variables(require("./handlers/variables.js")); // for bot variables (important, do not delete)
-require('./handlers/callbacks')(bot) // for loading most callbacks used in bot 
 
  const loader = new aoijs.LoadCommands(bot)
  loader.load(bot.cmd,"./commands/")
@@ -32,6 +33,7 @@ bot.status({
 })
 
 // parser support
-const {  Util } = require("aoi.js");
-const { parse } = require(`aoi.parser`);
-Util.parsers.ErrorHandler = parse;
+const { Util } = require("aoi.js");
+const { setup } = require("aoi.parser");
+
+setup(Util);

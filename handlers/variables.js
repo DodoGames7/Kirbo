@@ -2,6 +2,6 @@ module.exports = {
     chatbot: "none",
     isset: "",
     embed: "false",
-    replyping: "no"
+    replyping: "false"
     }
     

@@ -1,14 +1,14 @@
 module.exports = {
     name: "stats",
     code: `$title[bot info about $username[$clientID]]
-    $addField[User Count;$allMembersCount;yes]
-    $addField[Server Count;$serverCount;yes]
-    $addField[Node.js;$nodeVersion;yes]
-    $addField[Cpu;$cpu;yes]
-    $addField[Ram;$round[$ram];yes]
-    $addField[Ping;$pingms;yes]
-    $addField[Version;v3.0.4-alpha;yes]
-    $addField[Uptime;$uptime[humanize];yes]
-    $addField[Library;Aoi.js;yes]
+    $addField[User Count;$allMembersCount;true]
+    $addField[Server Count;$serverCount;true]
+    $addField[Node.js;$nodeVersion;true]
+    $addField[Cpu;$cpu;true]
+    $addField[Ram;$round[$ram];true]
+    $addField[Ping;$pingms;true]
+    $addField[Version;v3.0.4-preview;true]
+    $addField[Uptime;$uptime[humanize];true]
+    $addField[Library;Aoi.js;true]
     `
     }

@@ -1,7 +1,7 @@
 module.exports = {
 channel: "",
 type: "ready",
-code: `$log[Hey!, this is currently unstable this release is for testing purposes only if you want to use the stable version then you may be looking for either 3.0.1 or 3.0.2-preview for now!
+code: `$log[while this release is in preview, it may still have bugs, use it at your own risk for now.
 ]
 `
 }
