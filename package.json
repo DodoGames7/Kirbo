@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "aoi.js": "github:AkaruiDevelopment/aoi.js",
-    "aoi.parser": "^1.2.2"
+    "aoi.parser": "^1.2.3"
   },
   "engines": {
     "node": "16.x"
