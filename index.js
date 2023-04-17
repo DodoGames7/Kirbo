@@ -27,9 +27,9 @@ bot.variables(require("./handlers/variables.js")); // for bot variables (importa
 
  // enable discord status feature
 bot.status({
-  text: "type c!help for list of commands",
-  type: 0,
-  time: 12
+  text: "type c!help for list of commands", // tells the user to use the help cmd
+  type: 0, // use the type 0 aka "Playing"
+  time: 12 // useless as this is only one status setup
 })
 
 // enable aoi.parser for the special Select menu
