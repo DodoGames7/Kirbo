@@ -1,5 +1,8 @@
 module.exports = {
     name: "stats",
+    info: {
+        description: "returns stats information about the bot"
+      },
     aliases: "botinfo",
     code: `$title[bot info about $username[$clientID]]
     $addField[User Count;$allMembersCount;true]

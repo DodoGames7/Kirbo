@@ -1,5 +1,8 @@
 module.exports = {
     name: "setchatbot",
+    info: {
+      description: "set the chatbot channel!"
+    },
     aliases: "setchat",
     code: `
            $sendMessage[{newEmbed:{title:Choose a Channel}{description:click on the Select menu to choose an channel for me to talk!}{color:d74894}}

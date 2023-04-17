@@ -1,5 +1,8 @@
 module.exports = [{
     name: "settings",
+    info: {
+        description: "manage kirbo's chatbot settings"
+      },
     code: `$title[Settings]
     $description[hey $username, you can manage me on how i should behave to internet people by checking the following settings:
     
