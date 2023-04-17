@@ -1,5 +1,6 @@
 module.exports = {
     name: "stats",
+    aliases: "botinfo",
     code: `$title[bot info about $username[$clientID]]
     $addField[User Count;$allMembersCount;true]
     $addField[Server Count;$serverCount;true]

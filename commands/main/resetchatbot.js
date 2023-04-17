@@ -1,5 +1,6 @@
 module.exports = {
     name: "resetchatbot",
+    aliases: "resetchat",
     code: `$setGuildVar[chatbot;;$guildID]
            $setGuildVar[isset;;$guildID]
     alright! i no longer want to talk in that channel
