@@ -1,8 +1,8 @@
 
-const aoijs = require('aoi.js')
+const {AoiClient, LoadCommands, Util} = require('aoi.js')
 
 
-const bot = new aoijs.AoiClient({
+const bot = new AoiClient({
    token: process.env.TOKEN,
  //Discord Bot Token, (ofc it's hidden what did you expect)
    prefix: ["c!", "<@$clientID>"],  //Discord Bot Prefix
@@ -10,7 +10,6 @@ const bot = new aoijs.AoiClient({
    events: ["onMessage", "onInteractionCreate"],
    aoiLogs: false,
    aoiWarning: true,
-   respondToBots: false
  })
 
 
@@ -18,7 +17,7 @@ const bot = new aoijs.AoiClient({
 // handlers
 bot.variables(require("./handlers/variables.js")); // for bot variables (important, do not delete)
 
- const loader = new aoijs.LoadCommands(bot)
+ const loader = new LoadCommands(bot)
  loader.load(bot.cmd,"./commands/")
 
  /*
@@ -29,7 +28,7 @@ bot.variables(require("./handlers/variables.js")); // for bot variables (importa
  // enable discord status feature
 bot.status({
   text: "type c!help for list of commands",
-  type: "PLAYING",
+  type: 0,
   time: 12
 })
 
