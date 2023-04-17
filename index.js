@@ -9,7 +9,7 @@ const bot = new AoiClient({
    intents: ["Guilds", "MessageContent", "GuildMessages"], // the discord.js v14 intents
    events: ["onMessage", "onInteractionCreate"],
    aoiLogs: false,
-   aoiWarning: true,
+   aoiWarning: true
  })
 
 
@@ -32,7 +32,7 @@ bot.status({
   time: 12
 })
 
-// parser support
+// enable aoi.parser for the special Select menu
 const { Util } = require("aoi.js");
 const { setup } = require("aoi.parser");
 
