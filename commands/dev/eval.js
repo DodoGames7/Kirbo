@@ -2,7 +2,7 @@ module.exports = {
 name: "eval",
 aliases: "e",
 code: `$eval[$message]
-$onlyIf[$message!=;give me something to eval.]
-$onlyForIDS[$botOwnerid;]
+$onlyIf[$message!=;Give me something to eval.]
+$onlyIf[$checkContains[$clientOwnerIDs[,];$authorID]==true;]
 `
 }

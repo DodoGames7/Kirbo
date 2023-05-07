@@ -16,6 +16,7 @@ $let[response;$jsonRequest[https://api.popcat.xyz/chatbot?msg=$uri[$message;enco
 $reply[$messageID;$getGuildVar[replyping]]
 $botTyping
 $onlyForChannels[$getGuildVar[chatbot];]
+$onlyIf[$guildChannelExists[$guildID;$getGuildVar[chatbot]]==true;]
     `
     }
 

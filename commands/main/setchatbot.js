@@ -1,7 +1,7 @@
 module.exports = {
     name: "setchatbot",
     info: {
-      description: "set the chatbot channel!"
+      description: "Set the chatbot channel!"
     },
     aliases: "setchat",
     code: `

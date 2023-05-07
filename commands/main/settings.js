@@ -1,13 +1,13 @@
 module.exports = [{
     name: "settings",
     info: {
-        description: "manage kirbo's chatbot settings"
+        description: "Manage kirbo's chatbot settings"
       },
     code: `$title[Settings]
-    $description[hey $username, you can manage me on how i should behave to internet people by checking the following settings:
+    $description[Hey $username, you can manage me on how i should behave to internet people by checking the following settings:
     
-    **embed**: switch to embed mode when replying
-    **Reply Mention**: let's the bot ping you at every single reply
+    **embed**: Switch to embed mode when replying.
+    **Reply Mention**: Let's the bot ping you at every single reply.
     
     Note: click on buttons to toggle options to re-enable or re-disable them]
     $color[d74894]

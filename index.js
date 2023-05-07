@@ -8,9 +8,18 @@ const bot = new AoiClient({
    prefix: ["c!", "<@$clientID>"],  //Discord Bot Prefix
    intents: ["Guilds", "MessageContent", "GuildMessages"], // the discord.js v14 intents
    events: ["onMessage", "onInteractionCreate"],
-   aoiLogs: false,
-   aoiWarning: true
- })
+   aoiLogs: false, // don't show default aoi.js ready message
+   aoiWarning: true, // don't show warnings of update
+   database: { // use aoi.db for storing data
+    type: "aoi.db",
+    db: require("aoi.db"),
+    tables: ["main"],
+    path: "./database/",
+    extraOptions: {
+        dbType: "KeyValue"
+    },
+}
+});
 
 
 
@@ -33,7 +42,12 @@ bot.status({
 })
 
 // enable aoi.parser for the special Select menu
-const { Util } = require("aoi.js");
-const { setup } = require("aoi.parser");
-
-setup(Util);
+const { parse, createAst } = require("aoi.parser");
+const { parseExtraOptions, parseComponents } = require("aoi.parser/components");
+Util.parsers.ErrorHandler = parse;
+Util.parsers.OptionsParser = ( data ) => {
+     return createAst( data ).children.map( parseExtraOptions );
+};
+Util.parsers.ComponentParser = ( data ) => {
+     return createAst( data ).children.map( parseComponents );
+};

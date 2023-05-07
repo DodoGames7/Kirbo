@@ -1,7 +1,7 @@
 module.exports = {
     name: "resetchatbot",
     info: {
-       description: "resets the chatbot channel!"
+       description: "Resets the chatbot channel!"
      },
     aliases: "resetchat",
     code: `$setGuildVar[chatbot;;$guildID]

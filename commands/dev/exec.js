@@ -5,7 +5,7 @@ module.exports = {
     \`\`\`
     $exec[$message]
     \`\`\`
-    $onlyIf[$message!=;give me something to execute.]
-    $onlyForIDS[$botOwnerid;]
+    $onlyIf[$message!=;Give me something to execute.]
+    $onlyIf[$checkContains[$clientOwnerIDs[,];$authorID]==true;]
     `
     }
